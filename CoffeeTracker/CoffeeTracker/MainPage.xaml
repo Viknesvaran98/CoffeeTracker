@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoffeeTracker.MainPage" Title="Coffee Tracker">
+   
+    <ScrollView>
+        <StackLayout BackgroundColor="PapayaWhip">
+
+
+            <Label Text="Keep track of how much coffee you are drinking and daily caffeine intake" FontSize="20" Padding="30,10,30,10"/>
+
+            <StackLayout BackgroundColor="OldLace">
+                <Entry x:Name="inputLabel" Placeholder="Enter caffeine included according to the list below" Keyboard="Numeric"/>
+
+
+    
+
+
+            <StackLayout Margin="20"
+             WidthRequest="160"
+             HeightRequest="250"
+             BackgroundColor="BlanchedAlmond"
+             VerticalOptions="Center">
+                    <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" Color="#22A558"/>
+                   
+                    <Label Text="Decaf Coffee(Instant)-0.38mg per Oz" FontSize="12" TextColor="Brown" Padding="30,10,30,10" />
+                    <Label Text="Brewed Coffee-0.5mg per Oz" FontSize="12" TextColor="Brown" Padding="30,10,30,10"/>
+                    <Label Text="Espresso-12.5mg per Oz" FontSize="12" TextColor="Brown" Padding="30,10,30,10"/>
+                    <Label Text="Drip Coffee-15mg per Oz" FontSize="12" TextColor="Brown" Padding="30,10,30,10"/>
+                    <Label Text="Cold Brew Coffee-51.34mg per Oz" FontSize="12" TextColor="Brown" Padding="30,10,30,10"/>
+                    <Button x:Name="infoButton" Text="More Coffee List...." VerticalOptions="CenterAndExpand" WidthRequest="130" BorderWidth="2" BorderColor="White"   BackgroundColor="RosyBrown" BorderRadius="8" TextColor="White" Clicked="OnInfoClicked" />
+
+                    <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" Color="#22A558"/>
+                    
+                </StackLayout>
+                
+                <Label FontSize="Medium" TextColor="White" Text=""  IsVisible="{Binding IsNoExpertsFound}"></Label>
+            
+                <Entry x:Name="inputSize" Placeholder="Enter size of coffee(OZ)" Keyboard="Numeric"/>
+            <Entry x:Name="inputCost" Placeholder="Enter cost of coffee(RM)" Keyboard="Numeric"/>
+            <Entry x:Name="inputQuantity" Placeholder="Enter number of times coffee drank" Keyboard="Numeric"/>
+        </StackLayout>
+        
+            <Label FontSize="Medium" TextColor="White" Text=""  IsVisible="{Binding IsNoExpertsFound}"></Label>
+        
+            <FlexLayout Direction="Row"
+                AlignItems="Center"
+                JustifyContent="SpaceEvenly">
+
+                <Button x:Name="calculateButton" Text="Calculate" VerticalOptions="CenterAndExpand" WidthRequest="110"
+        BorderWidth="2" 
+        BorderColor="White" 
+        BackgroundColor="SandyBrown" 
+        BorderRadius="8"
+        TextColor="White" Clicked="OnCalculateCoffee" />
+                <Button x:Name="resetButton" Text="Reset" VerticalOptions="CenterAndExpand" WidthRequest="110" BorderWidth="2" BorderColor="White"   BackgroundColor="SlateGray" BorderRadius="8" TextColor="White" Clicked="OnReset" />
+
+        </FlexLayout>
+
+            <Label FontSize="Medium" TextColor="White" Text=""  IsVisible="{Binding IsNoExpertsFound}"></Label>
+        
+                <StackLayout HorizontalOptions="Center">
+                <Label Text="Total price(RM)" HorizontalTextAlignment="Center" FontSize="Large" FontAttributes="Bold"/>
+                <Label x:Name="outputResult" Text="0.00" HorizontalTextAlignment="Center" FontSize="Medium" FontAttributes="Bold"/>
+                <Label Text="Total caffeine intake(mg)" HorizontalTextAlignment="Center" FontSize="Large" FontAttributes="Bold"/>
+                <Label x:Name="outputIntake" Text="0.00" HorizontalTextAlignment="Center" FontSize="Medium" FontAttributes="Bold"/>
+                    
+            </StackLayout>
+
+            <Label FontSize="Medium" TextColor="White" Text=""  IsVisible="{Binding IsNoExpertsFound}"></Label>
+        
+            <FlexLayout Direction="Row"
+                    AlignItems="Center"
+                    JustifyContent="SpaceEvenly">
+                <ImageButton Source="Schedule.png"
+                         WidthRequest="50"
+                         HeightRequest="50"
+                         IsVisible="true"
+                         HorizontalOptions="End"
+                         />
+
+                <!--<Label Text="Choose a date" HorizontalTextAlignment="Start" />-->
+                <DatePicker x:Name="selectDate" DateSelected="onDatePickerSelected"/>
+
+            </FlexLayout>
+            <Label FontSize="Large" TextColor="White" Text=""  IsVisible="{Binding IsNoExpertsFound}"></Label>
+            <Label FontSize="Medium" TextColor="White" Text=""  IsVisible="{Binding IsNoExpertsFound}"></Label>
+            
+            <StackLayout HorizontalOptions="FillAndExpand">
+                <Button x:Name="saveButton" BorderWidth="2" BorderColor="White" BackgroundColor="lightgray" Text="Save" BorderRadius="200" VerticalOptions="CenterAndExpand" Clicked="OnSaveRecord" />
+               
+        </StackLayout>
+
+
+    </StackLayout>
+        </ScrollView>
+</ContentPage>

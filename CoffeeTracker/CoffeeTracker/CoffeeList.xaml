@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoffeeTracker.CoffeeList">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="OldLace">
+            <Label Text="More Coffee List" HorizontalTextAlignment="Center"
+           VerticalTextAlignment="Center"
+                 FontAttributes="Bold"
+                   FontSize="23"/>
+
+            <StackLayout Margin="20"
+             WidthRequest="160"
+             HeightRequest="410"
+             BackgroundColor="BlanchedAlmond"
+             VerticalOptions="Center">
+                <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" Color="#22A558"/>
+
+                <Label Text="Americano-15mg per Oz" FontSize="12" TextColor="Brown" Padding="30,10,30,10" />
+                <Label Text="Latte-8.5mg per Oz" FontSize="12" TextColor="Brown" Padding="30,10,30,10"/>
+                <Label Text="Mocha-6.7mg per Oz" FontSize="12" TextColor="Brown" Padding="30,10,30,10"/>
+                <Label Text="Pike Place Roast-19.6mg per Oz" FontSize="12" TextColor="Brown" Padding="30,10,30,10"/>
+                <Label Text="Decaf Pike Place Roast-1.7mg per Oz" FontSize="12" TextColor="Brown" Padding="30,10,30,10"/>
+                <Label Text="Cold Brew with Cold Foam-12.9mg per Oz" FontSize="12" TextColor="Brown" Padding="30,10,30,10"/>
+                <Label Text="Caramel Macchiato-6.3mg per Oz" FontSize="12" TextColor="Brown" Padding="30,10,30,10"/>
+                <Label Text="Cappuccino-6.3mg per Oz" FontSize="12" TextColor="Brown" Padding="30,10,30,10"/>
+                <Label Text="Brewed Coffee by Mcd-9.1mg per Oz" FontSize="12" TextColor="Brown" Padding="30,10,30,10"/>
+                <Label Text="Brewed Coffee by Dunkin Donuts-21.5mg per Oz" FontSize="12" TextColor="Brown" Padding="30,10,30,10"/>
+             
+
+                <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" Color="#22A558"/>
+
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

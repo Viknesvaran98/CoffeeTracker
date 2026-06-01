@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoffeeTracker.Information">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Fill" BackgroundColor="OldLace" >
+
+            <Label FontSize="Medium" TextColor="White" Text=""  IsVisible="{Binding IsNoExpertsFound}"></Label>
+            <Label FontSize="Title"
+           Text="What is Caffeine ?"
+           HorizontalTextAlignment="Center"
+           VerticalTextAlignment="Center"
+                 FontAttributes="Bold"
+           />
+            <Grid Padding="150,30,150,30">
+                <StackLayout Grid.Row="0" Grid.Column="0">
+                    <ImageButton Grid.Row="0" Grid.Column="0" BackgroundColor="Transparent"
+                          Source="coffeelogo3" Clicked="OnCoffeeClicked"/>
+                    <Label Grid.Row="0" Grid.Column="0" Text="More about Coffee" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+            </Grid>
+            
+          
+            <Label FontSize="Medium"
+           Text="A natural chemical with stimulant effects. It is found in over 60 products including coffee. Caffein works by stimulating the central nervous system, heart, muscles, and other centers that control blood pressure. Caffein also act like a water pill that increases urine flow."
+           HorizontalTextAlignment="Start"
+           VerticalTextAlignment="Center"
+              
+           />
+
+            <Label FontSize="Medium" TextColor="White" Text=""  IsVisible="{Binding IsNoExpertsFound}"></Label>
+            <Label FontSize="Medium" TextColor="White" Text=""  IsVisible="{Binding IsNoExpertsFound}"></Label>
+            <Label FontSize="Medium" TextColor="White" Text=""  IsVisible="{Binding IsNoExpertsFound}"></Label>
+            <Label FontSize="Medium" TextColor="White" Text=""  IsVisible="{Binding IsNoExpertsFound}"></Label>
+            
+
+            <Label FontSize="Large"
+           Text="Limitation of Caffein that needs to consume by every individuals."
+           HorizontalTextAlignment="Center"
+           VerticalTextAlignment="Center"
+               FontAttributes="Bold"
+           />
+
+            <FlexLayout Direction="Row"
+                    AlignItems="Center"
+                    JustifyContent="SpaceEvenly">
+            </FlexLayout>
+
+
+            <Label FontSize="Medium"
+           Text="Adults-400mg per day"
+           HorizontalTextAlignment="Center"
+           VerticalTextAlignment="Center"
+                
+           />
+            <Label FontSize="Medium"
+           Text="Ladies-126.7mg per day"
+           HorizontalTextAlignment="Center"
+           VerticalTextAlignment="Center"
+               
+           />
+            <Label FontSize="Medium"
+           Text="Teenagers-100mg per day"
+           HorizontalTextAlignment="Center"
+           VerticalTextAlignment="Center"
+                
+           />
+            <Label FontSize="Medium"
+           Text="Pregnant ladies-120mg per day"
+           HorizontalTextAlignment="Center"
+           VerticalTextAlignment="Center"
+               
+           />
+            <Label FontSize="Medium"
+           Text="Children -12mg-24mg per day"
+           HorizontalTextAlignment="Center"
+           VerticalTextAlignment="Center"
+              
+           />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

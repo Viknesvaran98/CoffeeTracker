@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoffeeTracker.DailyIntakes">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout HorizontalOptions="Fill" BackgroundColor="Honeydew">
+            <!--<Label
+           x:Name="displayRecord"
+           HorizontalTextAlignment="Center"
+           VerticalTextAlignment="Center"
+           />-->
+                <ListView x:Name="displayRecord" ItemsSource="{Binding DateRecorded}">
+                    <ListView.Header>
+                        <Grid>
+                            <Label Text="Date" HorizontalOptions="Center" FontAttributes="Bold"/>
+                            <Label Grid.Column="1" Text="Size (OZ)" HorizontalOptions="Center" FontAttributes="Bold"/>
+                            <Label Grid.Column="2" Text="Cost (RM)" HorizontalOptions="Center" FontAttributes="Bold"/>
+                            <Label Grid.Column="3" Text="Quantity" HorizontalOptions="Center" FontAttributes="Bold"/>
+                            <Label Grid.Column="4" Text="Caffeine Intake (mg)" HorizontalOptions="Center" FontAttributes="Bold" />
+                            <Label Grid.Column="5" Text="Price Result (RM)" HorizontalOptions="Center" FontAttributes="Bold" />
+                        </Grid>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Label Text="{Binding DateRecorded}" HorizontalOptions="Center" />
+                                    <Label Grid.Column="1" Text="{Binding Size}" HorizontalOptions="Center" />
+                                    <Label Grid.Column="2" Text="{Binding Cost}" HorizontalOptions="Center" />
+                                    <Label Grid.Column="3" Text="{Binding Quantity}" HorizontalOptions="Center" />
+                                    <Label Grid.Column="4" Text="{Binding ResultIntake}" HorizontalOptions="Center" />
+                                    <Label Grid.Column="5" Text="{Binding PriceResult}" HorizontalOptions="Center" />
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                </ListView>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

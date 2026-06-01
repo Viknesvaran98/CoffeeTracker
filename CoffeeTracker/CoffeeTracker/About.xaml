@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoffeeTracker.About">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Fill" BackgroundColor="#FFFFFF">
+
+            <Label FontSize="Medium" TextColor="#FFFFFF" Text=""  IsVisible="{Binding IsNoExpertsFound}"></Label>
+            
+            <ImageButton Source="coffeelogo.png"
+                         WidthRequest="170"
+                         HeightRequest="170"
+                         IsVisible="true"
+                         HorizontalOptions="CenterAndExpand"
+                         />
+            <Label FontSize="Medium" TextColor="White" Text=""  IsVisible="{Binding IsNoExpertsFound}"></Label>
+            
+            <Label FontSize="Large"
+           Text="Use this app to keep track on how much cost spent for coffee you drinking and caffein intake daily. "
+           HorizontalTextAlignment="Center"
+           VerticalTextAlignment="Start"
+           />
+
+   
+            <Line X1="40"
+      Y1="0"
+      X2="0"
+      Y2="120"
+      Stroke="White" />
+            <Line X1="40"
+      Y1="0"
+      X2="0"
+      Y2="120"
+      Stroke="White" />
+            <Line X1="40"
+      Y1="0"
+      X2="0"
+      Y2="120"
+      Stroke="White" />
+            <Line X1="40"
+      Y1="0"
+      X2="0"
+      Y2="120"
+      Stroke="White" />
+           
+     
+            <Label
+           Text="Version 1.0"
+           HorizontalTextAlignment="Center"
+           VerticalTextAlignment="End"
+                FontAttributes="Bold"
+           />
+                <Label
+           Text="Developer : Vic"
+           HorizontalTextAlignment="Center"
+           VerticalTextAlignment="End"
+                    FontAttributes="Bold"
+           />
+            </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
